@@ -1,0 +1,207 @@
+datasets:
+  raw:
+    search:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/google_search_data_new.csv
+      driver_params: {} 
+    manufacture:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/product_manufacturer_list.csv
+      driver_params: {}
+    sales:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/sales_data.csv
+      driver_params: {}
+    social:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/social_media_data.csv
+      driver_params: {}
+    theme:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/theme_list.csv
+      driver_params: {}
+    product:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/emerging/theme_product_list.csv
+      driver_params: {}
+  
+  cleaned:
+    search:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/google_search_data.csv
+      driver_params: {} 
+    manufacture:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/product_manufacturer_list.csv
+      driver_params: {}
+    sales:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/sales_data.csv
+      driver_params: {}
+    social:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/social_media_data.csv
+      driver_params: {}
+    theme:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/theme_list.csv
+      driver_params: {}
+    product:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/theme_product_list.csv
+      driver_params: {}
+    theme_sales:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/cleaned/emerging/theme_sales.csv
+      driver_params: {}
+
+  processed:
+    theme_low_carb:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/processed/emerging/theme_low_carb.csv
+      driver_params: {}
+    theme_chicken:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/processed/emerging/theme_chicken.csv
+      driver_params: {}
+    theme_salmon:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/processed/emerging/theme_salmon.csv
+      driver_params: {}
+
+  train:
+    theme_low_carb:
+      features_low_carb:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/features_low_carb.parquet
+        driver_params:
+          save:
+            index: False
+      target_low_carb:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/target_low_carb.parquet
+        driver_params:
+          save:
+            index: False
+            
+    theme_chicken:
+      features_chicken:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/features_chicken.parquet
+        driver_params:
+          save:
+            index: False
+      target_chicken:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/target_chicken.parquet
+        driver_params:
+          save:
+            index: False
+            
+    theme_salmon:
+      features_salmon:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/features_salmon.parquet
+        driver_params:
+          save:
+            index: False
+      target_salmon:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/train/emerging/target_salmon.parquet
+        driver_params:
+          save:
+            index: False
+      
+  test:
+    theme_low_carb:
+      features_low_carb:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/features_low_carb.parquet
+        driver_params:
+          save:
+            index: False
+      target_low_carb:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/target_low_carb.parquet
+        driver_params:
+          save:
+            index: False
+    theme_chicken:
+      features_chicken:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/features_chicken.parquet
+        driver_params:
+          save:
+            index: False
+      target_chicken:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/target_chicken.parquet
+        driver_params:
+          save:
+            index: False
+    theme_salmon:
+      features_salmon:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/features_salmon.parquet
+        driver_params:
+          save:
+            index: False
+      target_salmon:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/target_salmon.parquet
+        driver_params:
+          save:
+            index: False
+  score:
+    theme_low_carb:
+      output:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/scored_output_low_carb.parquet
+        driver_params:
+          save:
+            index: False
+    theme_chicken:
+      output:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/scored_output_chicken.parquet
+        driver_params:
+          save:
+            index: False
+    theme_salmon:
+      output:
+        type: ds
+        format: parquet
+        uri: ${core.data_base_path}/test/emerging/scored_output_salmon.parquet
+        driver_params:
+          save:
+            index: False
